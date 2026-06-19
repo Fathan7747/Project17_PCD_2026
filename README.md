@@ -18,3 +18,32 @@ Setelah preprocessing, dilakukan ekstraksi fitur tekstur menggunakan metode Gray
 Fitur-fitur hasil ekstraksi kemudian digunakan sebagai masukan bagi tiga algoritma klasifikasi, yaitu K-Nearest Neighbor (KNN), Support Vector Machine (SVM), dan Random Forest. Ketiga algoritma tersebut dipilih untuk dibandingkan performanya dalam mengklasifikasikan tingkat kematangan biji kopi. KNN mewakili metode klasifikasi berbasis kedekatan jarak data, SVM mewakili metode berbasis pemisahan ruang fitur yang optimal, sedangkan Random Forest mewakili metode ensemble yang menggabungkan banyak pohon keputusan. Perbandingan dilakukan menggunakan metrik evaluasi seperti accuracy, precision, recall, F1-score, serta confusion matrix untuk mengetahui model yang memberikan hasil terbaik.
 
 Melalui proyek ini diharapkan dapat diperoleh model klasifikasi yang mampu mengenali tingkat kematangan biji kopi secara akurat berdasarkan karakteristik teksturnya. Selain itu, penelitian ini juga menunjukkan pentingnya tahap preprocessing dan ekstraksi fitur dalam meningkatkan kualitas data masukan sehingga dapat membantu algoritma machine learning menghasilkan performa klasifikasi yang lebih optimal.
+
+Pre prossesing yang digunakan disetiap percobaan:
+ - Percobaan 1: Resize + Grayscale
+ - Percobaan 2: Resize + Grayscale + Median Filter + Gaussian Blur
+ - Percobaan 3: Resize + Grayscale + Mean Filter + Closing
+
+### Hasil Eksperimen
+Percobaan 1
+| Model | Accuracy | Precision | Recall | F1-Score |
+|--------|----------|----------|--------|----------|
+| KNN | 0.7250 | 0.7281 | 0.7250 | 0.7245 |
+| SVM | 0.8708 | 0.8713 | 0.8708 | 0.8709 |
+| Random Forest | 0.8041 | 0.8076 | 0.8041 | 0.8046 |
+
+Percobaan 2
+| Model | Accuracy | Precision | Recall | F1-Score |
+|--------|----------|----------|--------|----------|
+| KNN | 0.7875 | 0.7903 | 0.7875 | 0.7870 |
+| SVM | 0.9125 | 0.9135 | 0.9125 | 0.9125 |
+| Random Forest | 0.8458 | 0.8478 | 0.8458 | 0.8460 |
+
+Percobaan 3
+| Model | Accuracy | Precision | Recall | F1-Score |
+|--------|----------|----------|--------|----------|
+| KNN | 0.7666 | 0.7666 | 0.7666 | 0.7661 |
+| SVM | 0.8625 | 0.8629 | 0.8625 | 0.8625 |
+| Random Forest | 0.8250 | 0.8290 | 0.8250 | 0.8247 |
+
+![Hasil Perbandingan](HasilPerbandingan.png)
